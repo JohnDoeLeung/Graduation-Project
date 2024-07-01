@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>comida-module-pay</artifactId>
+        <groupId>co.comida.boot</groupId>
+        <version>${revision}</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>comida-module-pay-biz</artifactId>
+    <packaging>jar</packaging>
+
+    <name>${project.artifactId}</name>
+    <description>
+        pay 模块，我们放支付业务，提供业务的支付能力。
+        例如说：商户、应用、支付、退款等等
+    </description>
+
+    <dependencies>
+        <dependency>
+            <groupId>co.comida.boot</groupId>
+            <artifactId>comida-module-pay-api</artifactId>
+            <version>${revision}</version>
+        </dependency>
+
+        <!-- Web 相关 -->
+        <dependency>
+            <groupId>co.comida.boot</groupId>
+            <artifactId>comida-spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>co.comida.boot</groupId>
+            <artifactId>comida-spring-boot-starter-redis</artifactId>
+        </dependency>
+
+    </dependencies>
+
+</project>

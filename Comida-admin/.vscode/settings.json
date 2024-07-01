@@ -1,0 +1,7 @@
+{
+    "i18n-ally.localesPaths": [
+        "src/locales",
+        "public/UEditor/lang",
+        "public/UEditor22/lang"
+    ]
+}

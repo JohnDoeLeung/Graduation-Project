@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>co.comida.boot</groupId>
+        <artifactId>comida-module-mall</artifactId>
+        <version>${revision}</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>comida-module-coupon</artifactId>
+    <packaging>jar</packaging>
+
+    <name>${project.artifactId}</name>
+    <description>
+        coupon模块 API，暴露给其它模块调用
+        优惠券 模块，主要实现商品购物车相关功能
+    </description>
+
+    <dependencies>
+        <dependency>
+            <groupId>co.comida.boot</groupId>
+            <artifactId>comida-common</artifactId>
+        </dependency>
+
+        <!-- 参数校验 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+
+        <dependency>
+            <groupId>co.comida.boot</groupId>
+            <artifactId>comida-module-store</artifactId>
+            <version>${revision}</version>
+        </dependency>
+
+        <!-- Web 相关 -->
+        <dependency>
+            <groupId>co.comida.boot</groupId>
+            <artifactId>comida-spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>co.comida.boot</groupId>
+            <artifactId>comida-spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <!-- DB 相关 -->
+        <dependency>
+            <groupId>co.comida.boot</groupId>
+            <artifactId>comida-spring-boot-starter-mybatis</artifactId>
+        </dependency>
+
+    </dependencies>
+
+</project>

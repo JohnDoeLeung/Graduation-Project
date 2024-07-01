@@ -1,0 +1,2 @@
+org.comida.framework.security.config.ComidaSecurityAutoConfiguration
+org.comida.framework.security.config.ComidaWebSecurityConfigurerAdapter

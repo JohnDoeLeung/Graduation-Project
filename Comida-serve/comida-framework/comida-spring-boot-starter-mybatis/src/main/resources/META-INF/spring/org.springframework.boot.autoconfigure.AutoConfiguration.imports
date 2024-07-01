@@ -1,0 +1,2 @@
+org.comida.framework.datasource.config.ComidaDataSourceAutoConfiguration
+org.comida.framework.mybatis.config.ComidaMybatisAutoConfiguration

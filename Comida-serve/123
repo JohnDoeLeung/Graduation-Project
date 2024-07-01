@@ -1,0 +1,28 @@
+const loginForWechatMini = async (e) => {
+  if (!isChecked.value) {
+    uToast.value.show({
+      message: "请勾选下面协议",
+      type: "error",
+    });
+    return;
+  }
+  if (e.detail.encryptedData && e.detail.iv) {
+    let data = await userLoginForWechatMini({
+      encryptedData: e.detail.encryptedData,
+      iv: e.detail.iv,
+      openid: openid.value,
+    });
+    if (data) {
+      main.SET_MEMBER(data.userInfo);
+      main.SET_TOKEN(data.accessToken);
+      uToast.value.show({
+        title: "登录成功",
+        type: "success",
+      });
+      setTimeout(function () {
+        uni.navigateBack();
+      }, 2000);
+    }
+  }
+};
+adgfafsdffgvzdgfsdgfsdgfsdfgsdgfdsgsdfg

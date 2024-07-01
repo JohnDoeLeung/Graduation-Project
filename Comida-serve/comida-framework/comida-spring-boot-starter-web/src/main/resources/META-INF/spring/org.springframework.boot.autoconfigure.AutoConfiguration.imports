@@ -1,0 +1,6 @@
+org.comida.framework.jackson.config.ComidaJacksonAutoConfiguration
+com.github.xiaoymin.knife4j.spring.configuration.Knife4jAutoConfiguration
+org.comida.framework.swagger.config.ComidaSwaggerAutoConfiguration
+org.comida.framework.web.config.ComidaWebAutoConfiguration
+org.comida.framework.xss.config.ComidaXssAutoConfiguration
+org.comida.framework.banner.config.ComidaBannerAutoConfiguration

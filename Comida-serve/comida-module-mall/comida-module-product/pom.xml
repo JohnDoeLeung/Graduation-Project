@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>co.comida.boot</groupId>
+        <artifactId>comida-module-mall</artifactId>
+        <version>${revision}</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>comida-module-product</artifactId>
+    <packaging>jar</packaging>
+
+    <name>${project.artifactId}</name>
+    <description>
+        product 模块，主要实现商品相关功能
+        例如：品牌、商品分类、spu、sku等功能。
+    </description>
+
+    <dependencies>
+        <dependency>
+            <groupId>co.comida.boot</groupId>
+            <artifactId>comida-common</artifactId>
+        </dependency>
+
+        <!-- 参数校验 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>io.swagger.core.v3</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>2.2.8</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>co.comida.boot</groupId>
+            <artifactId>comida-module-store</artifactId>
+            <version>${revision}</version>
+        </dependency>
+
+        <!-- Web 相关 -->
+        <dependency>
+            <groupId>co.comida.boot</groupId>
+            <artifactId>comida-spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>co.comida.boot</groupId>
+            <artifactId>comida-spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <!-- DB 相关 -->
+        <dependency>
+            <groupId>co.comida.boot</groupId>
+            <artifactId>comida-spring-boot-starter-mybatis</artifactId>
+        </dependency>
+
+    </dependencies>
+
+</project>

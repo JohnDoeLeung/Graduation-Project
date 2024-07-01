@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>co.comida.boot</groupId>
+        <artifactId>comida-framework</artifactId>
+        <version>${revision}</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>comida-spring-boot-starter-web</artifactId>
+    <packaging>jar</packaging>
+
+    <name>${project.artifactId}</name>
+    <description>Web 框架，全局异常、API 日志等
+        Banner 用于在 console 控制台，打印开发文档、接口文档等
+        错误码 ErrorCode 的自动配置功能，提供如下功能：
+        1. 远程读取：项目启动时，从 system-server 服务，读取数据库中的 ErrorCode 错误码，实现错误码的提水可配置；
+        2. 自动更新：管理员在管理后台修数据库中的 ErrorCode 错误码时，项目自动从 system-server 服务加载最新的 ErrorCode 错误码；
+        3. 自动写入：项目启动时，将项目本地的错误码写到 system-server 服务中，方便管理员在管理后台编辑；
+        脱敏组件：支持 JSON 返回数据时，将邮箱、手机等字段进行脱敏
+    </description>
+    <url>https://github.com/guchengwuyue/comida-pro</url>
+
+    <dependencies>
+        <dependency>
+            <groupId>co.comida.boot</groupId>
+            <artifactId>comida-common</artifactId>
+        </dependency>
+
+        <!-- Web 相关 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!-- spring boot 配置所需依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-openapi3-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <scope>provided</scope> <!-- 设置为 provided，主要是 GlobalExceptionHandler 使用 -->
+        </dependency>
+
+        <!-- 业务组件 -->
+        <dependency>
+            <groupId>co.comida.boot</groupId>
+            <artifactId>comida-module-infra-api</artifactId> <!-- 需要使用它，进行操作日志的记录 -->
+            <version>${revision}</version>
+        </dependency>
+
+        <!-- xss -->
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+        </dependency>
+
+        <!-- Spring 核心 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+
+
+        <!-- 业务组件 -->
+        <dependency>
+            <groupId>co.comida.boot</groupId>
+            <artifactId>comida-module-system-api</artifactId> <!-- 需要使用它，进行操作日志的记录 -->
+            <version>${revision}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>jakarta.validation</groupId>
+            <artifactId>jakarta.validation-api</artifactId>
+            <scope>provided</scope> <!-- 设置为 provided，主要是 ErrorCodeProperties 使用到 -->
+        </dependency>
+
+        <!-- jackson -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+
+    </dependencies>
+
+</project>

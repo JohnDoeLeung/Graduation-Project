@@ -1,0 +1,2 @@
+org.comida.framework.redis.config.ComidaRedisAutoConfiguration
+org.comida.framework.redis.config.ComidaCacheAutoConfiguration
